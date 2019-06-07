@@ -64,7 +64,7 @@ if($i==1){$count=12;}elseif($i==2){$count=6;}elseif($i==3){$count=4;}elseif($i==
 						<?php if($skillset->skillset_icon_option == 'upload') { ?>
 							<?php if(!empty($skillset->skillset_icon_upload)) {?>
 								<div class="counter-icon">
-									<img src="<?php echo $skillset->skillset_icon_upload; ?>"></img>
+									<img src="<?php echo $skillset->skillset_icon_upload; ?>" alt="<?php echo $skillset->skillset_title; ?>"></img>
 								</div>
 							<?php } ?>
 						<?php }elseif($skillset->skillset_icon_option == 'icon'){ ?>
@@ -111,7 +111,7 @@ if($i==1){$count=12;}elseif($i==2){$count=6;}elseif($i==3){$count=4;}elseif($i==
 						<?php if($skillset->skillset_icon_option == 'upload') { ?>
 							<?php if(!empty($skillset->skillset_icon_upload)) {?>
 								<div class="counter-icon">
-									<img src="<?php echo $skillset->skillset_icon_upload; ?>"></img>
+									<img src="<?php echo $skillset->skillset_icon_upload; ?>" alt="<?php echo $skillset->skillset_title; ?>"></img>
 								</div>
 							<?php } ?>
 						<?php }elseif($skillset->skillset_icon_option == 'icon'){ ?>
