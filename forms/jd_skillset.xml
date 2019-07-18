@@ -13,6 +13,6 @@
 			<option value="icon">MOD_JD_SKILLSET_ICON_CLASS</option>
 		</field>
 		<field name="skillset_icon_upload" label="MOD_JD_SKILLSET_ICON_OPTIONS_UPLAOD_LABEL" description="MOD_JD_SKILLSET_ICON_OPTIONS_UPLAOD_DESC" showon="skillset_icon_option:upload" type="media" />
-		<field name="skillset_icon_icon" label="MOD_JD_SKILLSET_ENTER_WEBFONT_CODE_LABEL" description="MOD_JD_SKILLSET_ENTER_WEBFONT_CODE_DESC" hint="fab fa-accusoft" showon="skillset_icon_option:icon" type="text" />
+		<field name="skillset_icon_icon" label="MOD_JD_SKILLSET_ENTER_WEBFONT_CODE_LABEL" description="MOD_JD_SKILLSET_ENTER_WEBFONT_CODE_DESC" hint="fab fa-joomla" showon="skillset_icon_option:icon" type="text" />
 	</fieldset>
 </form>
