@@ -15,7 +15,7 @@ if($params->get('load_bootstrap', 1)){
 	$doc->addStyleSheet('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
 }
 if($params->get('load_fontawesome', 1)){
-	$doc->addStyleSheet('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+	$doc->addStyleSheet('https://use.fontawesome.com/releases/v5.10.1/css/all.css');
 }
 class modJdSkillSetHelper {
    
