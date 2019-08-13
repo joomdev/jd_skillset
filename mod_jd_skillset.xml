@@ -31,7 +31,7 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic" addfieldpath="/modules/mod_jd_skillset/fields">
-				<field name="skillsets" type="subform" formsource="/modules/mod_jd_skillset/forms/jd_skillset.xml" multiple="true" label="MOD_JD_SKILLSET_CREATE_LABEL" max="4" />
+				<field name="skillsets" type="subform" formsource="/modules/mod_jd_skillset/forms/jd_skillset.xml" multiple="true" label="MOD_JD_SKILLSET_CREATE_LABEL"/>
 			</fieldset>
 			<fieldset name="options">
 				<field name="IconPosition" type="radio" class="btn-group btn-group-yesno" label="MOD_JD_SKILLSET_ICON_POSITION_LABEL" description="MOD_JD_SKILLSET_ICON_POSITION_DESC" default="top">
