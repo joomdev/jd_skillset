@@ -24,7 +24,7 @@
 		<language tag="en-GB">en-GB/en-GB.mod_jd_skillset.sys.ini</language>
 	</languages>
 
-   <updateservers>
+	<updateservers>
 		<server type="extension" name="mod_jd_skillset" priority="1">https://cdn.joomdev.com/extensionupdates/mod_jd_skillset.xml</server>
 	</updateservers>
 
@@ -49,6 +49,10 @@
 					<option value="sup">MOD_JD_SKILLSET_SUP_LABEL</option>
 				</field>
 				<field name="load_bootstrap" type="radio" label="MOD_JD_SKILLSET_LOAD_BOOTSTRAP_LABEL" description="MOD_JD_SKILLSET_LOAD_BOOTSTRAP_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="load_jquery" type="radio" label="MOD_JD_SKILLSET_LOAD_JQUERY_LABEL" description="MOD_JD_SKILLSET_LOAD_JQUERY_DESC" default="1" class="btn-group btn-group-yesno">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
