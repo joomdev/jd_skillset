@@ -2,6 +2,14 @@
 // Ngo
 // No direct access
 defined('_JEXEC') or die;
+
+$doc = JFactory::getDocument();
+if ($params->get('load_fontawesome', 1)) {
+	$doc->addStyleSheet('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+}
+$doc->addStyleSheet(JURI::root() . 'media/mod_jd_skillset/css/mod_jd_skillset.css');
+$doc->addStyleSheet(JURI::root() . 'media/mod_jd_skillset/css/jdgrid.min.css');
+
 $skillsets = $params->get('skillsets', []);
 $numberPosition = $params->get('numberPosition', 'above');
 $symbolPosition = $params->get('symbolPosition', 'default');
