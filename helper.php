@@ -12,9 +12,11 @@ defined('_JEXEC') or die;
 $doc = JFactory::getDocument();
 $doc->addStyleSheet(JURI::root().'media/mod_jd_skillset/css/mod_jd_skillset.css');
 $doc->addStyleSheet(JURI::root().'media/mod_jd_skillset/css/jdgrid.min.css');
-if($params->get('load_fontawesome', 1)){
-	$doc->addStyleSheet('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
-}
+try{
+	if($params->get('load_fontawesome', 1)){
+		$doc->addStyleSheet('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+	}
+}catch(\Exception $e){}
 class modJdSkillSetHelper {
    
 }
