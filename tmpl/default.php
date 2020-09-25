@@ -1,11 +1,10 @@
 <?php
-// Ngo
 // No direct access
 defined('_JEXEC') or die;
 
 $doc = JFactory::getDocument();
 if ($params->get('load_fontawesome', 1)) {
-	$doc->addStyleSheet('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+	$doc->addStyleSheet('https://use.fontawesome.com/releases/v5.14.0/css/all.css');
 }
 $doc->addStyleSheet(JURI::root() . 'media/mod_jd_skillset/css/mod_jd_skillset.css');
 $doc->addStyleSheet(JURI::root() . 'media/mod_jd_skillset/css/jdgrid.min.css');
@@ -42,40 +41,38 @@ if ($i == 1) {
 }
 ?>
 <style>
-	<?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?>.counter-title {
+	<?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?> .counter-title {
 		font-size: <?php echo $titleSize; ?>px;
 	}
 
-	#skillset-<?php echo $module->id; ?>.counter-number .count {
+	#skillset-<?php echo $module->id; ?> .counter-number .count {
 		font-size: <?php echo $numberSize; ?>px;
 	}
 
-	#skillset-<?php echo $module->id; ?>.counter-number .symbol {
+	#skillset-<?php echo $module->id; ?> .counter-number .symbol {
 		font-size: <?php echo $symbolSize; ?>px;
 	}
 
-	#skillset-<?php echo $module->id; ?>.count-icon {
+	#skillset-<?php echo $module->id; ?> .count-icon {
 		font-size: <?php echo $iconSize; ?>px;
 	}
 
-	<?php } ?><?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?>.counter-title {
+	<?php } ?><?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?> .counter-title {
 		color: <?php echo $titleColor; ?>;
 	}
 
-	#skillset-<?php echo $module->id; ?>.counter-number .count {
+	#skillset-<?php echo $module->id; ?> .counter-number .count {
 		color: <?php echo $numberColor; ?>;
 	}
 
-	#skillset-<?php echo $module->id; ?>.counter-number .symbol {
+	#skillset-<?php echo $module->id; ?> .counter-number .symbol {
 		color: <?php echo $symbolColor; ?>;
 	}
 
-	#skillset-<?php echo $module->id; ?>.count-icon {
+	#skillset-<?php echo $module->id; ?> .count-icon {
 		color: <?php echo $iconColor; ?>;
 	}
-
 	<?php } ?>
-	/*# sourceMappingURL=style.css.map */
 </style>
 <div id="jd_skillset<?php echo $module->id; ?>" class="row counter-sub-container skillset-not-counted <?php if ($params->get('IconPosition') == 'left') echo 'jd-icon-position-left'; ?><?php if ($params->get('IconPosition') == 'right') echo 'jd-icon-position-right'; ?> ">
 	<?php foreach ($skillsets as $skillset) : ?>
