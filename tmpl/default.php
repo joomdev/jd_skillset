@@ -74,7 +74,7 @@ if ($i == 1) {
 	}
 	<?php } ?>
 </style>
-<div id="jd_skillset<?php echo $module->id; ?>" class="row counter-sub-container skillset-not-counted <?php if ($params->get('IconPosition') == 'left') echo 'jd-icon-position-left'; ?><?php if ($params->get('IconPosition') == 'right') echo 'jd-icon-position-right'; ?> ">
+<div id="jd_skillset<?php echo $module->id; ?>" class="jd-row counter-sub-container skillset-not-counted <?php if ($params->get('IconPosition') == 'left') echo 'jd-icon-position-left'; ?><?php if ($params->get('IconPosition') == 'right') echo 'jd-icon-position-right'; ?> ">
 	<?php foreach ($skillsets as $skillset) : ?>
 		<div class="jd-col-12 jd-col-md-6 jd-col-lg-<?php echo $count; ?>" id="skillset-<?php echo $module->id; ?>">
 			<div class="counter-wrapper">
