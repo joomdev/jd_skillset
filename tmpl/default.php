@@ -41,42 +41,43 @@ if ($i == 1) {
 }
 ?>
 <style>
-	<?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?> .counter-title {
+	<?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?>.counter-title {
 		font-size: <?php echo $titleSize; ?>px;
 	}
 
-	#skillset-<?php echo $module->id; ?> .counter-number .count {
+	#skillset-<?php echo $module->id; ?>.counter-number .count {
 		font-size: <?php echo $numberSize; ?>px;
 	}
 
-	#skillset-<?php echo $module->id; ?> .counter-number .symbol {
+	#skillset-<?php echo $module->id; ?>.counter-number .symbol {
 		font-size: <?php echo $symbolSize; ?>px;
 	}
 
-	#skillset-<?php echo $module->id; ?> .count-icon {
+	#skillset-<?php echo $module->id; ?>.count-icon {
 		font-size: <?php echo $iconSize; ?>px;
 	}
 
-	<?php } ?><?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?> .counter-title {
+	<?php } ?><?php if ($customsStyle) { ?>#skillset-<?php echo $module->id; ?>.counter-title {
 		color: <?php echo $titleColor; ?>;
 	}
 
-	#skillset-<?php echo $module->id; ?> .counter-number .count {
+	#skillset-<?php echo $module->id; ?>.counter-number .count {
 		color: <?php echo $numberColor; ?>;
 	}
 
-	#skillset-<?php echo $module->id; ?> .counter-number .symbol {
+	#skillset-<?php echo $module->id; ?>.counter-number .symbol {
 		color: <?php echo $symbolColor; ?>;
 	}
 
-	#skillset-<?php echo $module->id; ?> .count-icon {
+	#skillset-<?php echo $module->id; ?>.count-icon {
 		color: <?php echo $iconColor; ?>;
 	}
+
 	<?php } ?>
 </style>
 <div id="jd_skillset<?php echo $module->id; ?>" class="jd-row counter-sub-container skillset-not-counted <?php if ($params->get('IconPosition') == 'left') echo 'jd-icon-position-left'; ?><?php if ($params->get('IconPosition') == 'right') echo 'jd-icon-position-right'; ?> ">
-	<?php foreach ($skillsets as $skillset) : ?>
-		<div class="jd-col-12 jd-col-md-6 jd-col-lg-<?php echo $count; ?>" id="skillset-<?php echo $module->id; ?>">
+	<?php foreach ($skillsets as $index => $skillset) : ?>
+		<div class="jd-col-12 jd-col-md-6 jd-col-lg-<?php echo $count; ?>" id="skillset-<?php echo $index; ?>-<?php echo $module->id; ?>">
 			<div class="counter-wrapper">
 				<?php if ($params->get('IconPosition') == 'top' or $params->get('IconPosition') == 'right' or $params->get('IconPosition') == 'left') { ?>
 					<?php if ($skillset->skillset_icon_option == 'upload') { ?>
@@ -102,19 +103,10 @@ if ($i == 1) {
 									<?php
 									if (($skillset->skillset_enable_symbol)) { ?>
 										<span>
-											<<?php if ($symbolPosition == 'sub') {
-													echo 'sub';
-												} elseif ($symbolPosition == 'sup') {
-													echo "sup";
-												} else {
-													echo 'span';
-												} ?> class="symbol"><?php echo $skillset->skillset_symbol; ?><?php if ($symbolPosition == 'sub') {
-																													echo '</sub>';
-																												} elseif ($symbolPosition == 'sup') {
-																													echo "</sup>";
-																												} else {
-																													'</span>';
-																												} ?>
+											<?php $symbolTag = $symbolPosition == 'default' ? 'span' : $symbolPosition; ?>
+											<<?php echo $symbolTag; ?> class="symbol">
+												<?php echo $skillset->skillset_symbol; ?>
+											</<?php echo $symbolTag; ?>>
 										</span>
 									<?php } ?>
 								</p>
@@ -131,19 +123,12 @@ if ($i == 1) {
 									<?php
 									if (($skillset->skillset_enable_symbol)) { ?>
 										<span>
-											<<?php if ($symbolPosition == 'sub') {
-													echo 'sub';
-												} elseif ($symbolPosition == 'sup') {
-													echo "sup";
-												} else {
-													echo 'span';
-												} ?> class="symbol"><?php echo $skillset->skillset_symbol; ?><?php if ($symbolPosition == 'sub') {
-																													echo '</sub>';
-																												} elseif ($symbolPosition == 'sup') {
-																													echo "</sup>";
-																												} else {
-																													'</span>';
-																												} ?>
+											<span>
+												<?php $symbolTag = $symbolPosition == 'default' ? 'span' : $symbolPosition; ?>
+												<<?php echo $symbolTag; ?> class="symbol">
+													<?php echo $skillset->skillset_symbol; ?>
+												</<?php echo $symbolTag; ?>>
+											</span>
 										</span>
 									<?php } ?>
 								</p>
